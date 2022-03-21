@@ -27,7 +27,7 @@ namespace Restaurant
             return "Beschikbaarheid: " + Beschikbaar + ", Tafelnummer: " + TafelID + ", Binnen of buiten: " + Locatie;
         }
     }
-    public class Gerechten
+    public class MainMenu
     {
 
         public static void NotMain()
