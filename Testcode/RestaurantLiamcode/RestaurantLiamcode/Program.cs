@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-
 //makes list work DONT DELETE
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 
 namespace RestaurantLiamCode
 {
@@ -23,22 +21,32 @@ namespace RestaurantLiamCode
         }
     }
 
+    //class for reservations
     public class Reservaties
     {
         public string Beschikbaar { get; set; }
         public int TafelID { get; set; }
         public string Locatie { get; set; }
+        //makes it possible to print class elements
         public override string ToString()
         {
             return "Beschikbaarheid: " + Beschikbaar + ", Tafelnummer: " + TafelID + ", Binnen of buiten: " + Locatie;
         }
     }
 
+    //class for client registration
     public class klantReg
     {
         public string Email { get; set; }
         public string Reservation { get; set; }
-    
+
+    }
+
+    public class medeLogin
+    {
+        public string Login { get; set; }
+        public string Password { get; set; }
+        public string Name { get; set; }
     }
     public class Gerechten
     {
@@ -52,7 +60,16 @@ namespace RestaurantLiamCode
 
             List<Menu> menuItems = new List<Menu>();
             List<Reservaties> Tafels = new List<Reservaties>();
+            //List<medeLogin> medeLoginItems = new List<medeLogin>();
 
+            //medeLoginItems.Add(new medeLogin() { Login = "Testlogin", Password = "Testpassword", Name = "Rafael J." });
+            //medeLoginItems.Add(new medeLogin() { Login = "LoginTest", Password = "PasswordTest", Name = "Jafael R." });
+
+            //string fileNameMedewerkersLogin = @"..\..\..\..\..\..\..\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\medewerkersLogin.json";
+            //string jsonStringMedewerkers = JsonSerializer.Serialize(medeLoginItems, JSONoptions);
+            //File.WriteAllText(fileNameMedewerkersLogin, jsonStringMedewerkers);
+
+            //add new tables to reservations
             Tafels.Add(new Reservaties() { Beschikbaar = "Niet", TafelID = 1, Locatie = "Buiten" });
             Tafels.Add(new Reservaties() { Beschikbaar = "Wel", TafelID = 2, Locatie = "Buiten" });
             Tafels.Add(new Reservaties() { Beschikbaar = "Niet", TafelID = 3, Locatie = "Binnen" });
@@ -61,7 +78,7 @@ namespace RestaurantLiamCode
 
             // Gerechten toevoegen
             menuItems.Add(new Menu() { Gerechtnaam = "Kolokithopita", Prijs = "10,50", Desc = "Bladerdeeghapjes met feta en courgette", Allergenen = new string[] { "ei", "tarwe", "zuivel" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Rizogalo", Prijs = "5,-", Desc = "Griekse rijstepap", Allergenen = new string[] { "ei", "zuivel"} });
+            menuItems.Add(new Menu() { Gerechtnaam = "Rizogalo", Prijs = "5,-", Desc = "Griekse rijstepap", Allergenen = new string[] { "ei", "zuivel" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Koulouri Thessalonikis", Prijs = "6,50", Desc = "Rond sesambrood", Allergenen = new string[] { "tarwe", "sesam" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Marides tiganites", Prijs = "11,-", Desc = "Knapperig gefrituurde sardines", Allergenen = new string[] { "tarwe", "vis" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Piadine", Prijs = "7,-", Desc = "Platbrood met mozarella en tomaat", Allergenen = new string[] { "tarwe", "kaas" } });
@@ -103,22 +120,27 @@ namespace RestaurantLiamCode
                 Console.WriteLine("Type your email address");
 
                 string email = Console.ReadLine();
-                string fileName = @"..\..\..\..\..\..\..\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\klantReg.json";
-                var jsonData = File.ReadAllText(fileName);
 
+                //relative file location, should work on every pc
+                string fileNameKlantReg = @"..\..\..\..\..\..\..\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\klantReg.json";
+                var jsonData = File.ReadAllText(fileNameKlantReg);
+
+                //deserializes and puts data into list
                 var clientlist = JsonSerializer.Deserialize<List<klantReg>>(jsonData)
                       ?? new List<klantReg>();
 
+                //adds new entry to list
                 clientlist.Add(new klantReg()
                 {
                     Email = email,
                     Reservation = "none"
                 });
 
-                string jsonString = JsonSerializer.Serialize(clientlist, JSONoptions);
-                
-                
-                File.WriteAllText(fileName, jsonString);
+                //serializes list again
+                string jsonStringKlanten = JsonSerializer.Serialize(clientlist, JSONoptions);
+
+                //overwrites list with new entry
+                File.WriteAllText(fileNameKlantReg, jsonStringKlanten);
             }
 
 
@@ -128,14 +150,16 @@ namespace RestaurantLiamCode
                 string choiceLogin = Console.ReadLine();
                 if (choiceLogin == "1")
                 {
-                    string fileName = @"..\..\..\..\..\..\..\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\klantReg.json";
-                    var jsonData = File.ReadAllText(fileName);
+                    string fileNameKlantReg = @"..\..\..\..\..\..\..\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\klantReg.json";
+                    var jsonData = File.ReadAllText(fileNameKlantReg);
                     var clientlist = JsonSerializer.Deserialize<List<klantReg>>(jsonData)
                         ?? new List<klantReg>();
                     string jsonString = JsonSerializer.Serialize(clientlist, JSONoptions);
                     string input = Console.ReadLine();
-                    
-                    if(jsonString.Contains(input) & input != "none") 
+
+                    //checks if input is already in Json file, if not, informs user does not exist
+
+                    if (jsonString.Contains(input) & input != "none")
                     {
                         Console.WriteLine("You are logged in");
                     }
@@ -149,10 +173,40 @@ namespace RestaurantLiamCode
 
                 if (choiceLogin == "2")
                 {
-                    Console.WriteLine("user login");
+                    Console.WriteLine("Login:");
+                    string loginMedewerker = Console.ReadLine();
+
+                    string fileNameMedewerkersLogin = @"..\..\..\..\..\..\..\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\medewerkersLogin.json";
+                    var jsonData = File.ReadAllText(fileNameMedewerkersLogin);
+
+                    //deserializes and puts data into list
+                    var medewerkersList = JsonSerializer.Deserialize<List<medeLogin>>(jsonData)
+                          ?? new List<medeLogin>();
+
+                    string jsonString = JsonSerializer.Serialize(medewerkersList, JSONoptions);
+
+                    if (jsonString.Contains(loginMedewerker))
+                    {
+                        Console.WriteLine("Password:");
+                        string passwordMedewerker = Console.ReadLine();
+
+                        if (jsonString.Contains(passwordMedewerker))
+                        {
+                            Console.WriteLine(medewerkersList[1]);
+                            Console.WriteLine("Welcome");
+                        }
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Username does not exist");
+                    }
+                    
+                    
+
                 }
-                
-                
+
+
             }
 
         }
