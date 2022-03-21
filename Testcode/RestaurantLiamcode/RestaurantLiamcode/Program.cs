@@ -93,9 +93,23 @@ namespace RestaurantLiamCode
             menuItems.Add(new Menu() { Gerechtnaam = "Çig köfte", Prijs = "8,50", Desc = "Gekruid lamsgehakt op een stokje", Allergenen = new string[] { "lam", "tarwe" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Kabak mücveri", Prijs = "7,50", Desc = "Gebakken geschaafde courgette", Allergenen = new string[] { "ei", "tarwe" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Kisir", Prijs = "6,50", Desc = "Salade met bulgur", Allergenen = new string[] { "tarwe" } });
-            Console.WriteLine("Welkom je zit nu in main menu");
-            Console.WriteLine("Druk 1 om naar menu te gaan, druk 2 om daar te gaan, druk 3 om gebruikers te toevoegen, druk 4 om in te loggen");
-
+            //Console.WriteLine("Welkom je zit nu in main menu");
+            //Console.WriteLine("Druk 1 om naar menu te gaan, druk 2 om daar te gaan, druk 3 om gebruikers te toevoegen, druk 4 om in te loggen");
+            Console.WriteLine("╒════════════════════════════════════════════════╕");
+            Console.WriteLine("│  x   Welkom bij het restaurant Chum Bucket x   │");
+            Console.WriteLine("│x Type 1 om het menu te bekijken.               │");
+            Console.WriteLine("│x Type 2 om te reserveren.                      │");
+            Console.WriteLine("│x Type 3 om een gebruiker aan te maken.         │");
+            Console.WriteLine("│x Type 4 om als medewerker in te loggen.        │");
+            Console.WriteLine("│x Type _ om te ___                              │");
+            Console.WriteLine("│x Type _ om te ___                              │");
+            Console.WriteLine("╘════════════════════════════════════════════════╛");
+            Console.WriteLine("                                                ");
+            Console.WriteLine("╒═════════════════════════════════════════════╕");
+            Console.WriteLine("│ Openingstijden: elke dag van 8:00 tot 22:00 │");
+            Console.WriteLine("│ Locatie: Oostkousdijk 5                     │");
+            Console.WriteLine("│ We zien u graag snel!                       │");
+            Console.WriteLine("╘═════════════════════════════════════════════╛");
             //Reads input
             string Choice = Console.ReadLine();
             if (Choice == "1")
