@@ -11,3 +11,16 @@ C:\Users\Hp\source\repos\Restaurant\Restaurant\bin\Debug\netcoreapp3.1\Restauran
 C:\Users\Hp\source\repos\Restaurant\Restaurant\obj\Debug\netcoreapp3.1\Restaurant.dll
 C:\Users\Hp\source\repos\Restaurant\Restaurant\obj\Debug\netcoreapp3.1\Restaurant.pdb
 C:\Users\Hp\source\repos\Restaurant\Restaurant\obj\Debug\netcoreapp3.1\Restaurant.genruntimeconfig.cache
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\obj\Debug\netcoreapp3.1\Restaurant.csprojAssemblyReference.cache
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\obj\Debug\netcoreapp3.1\Restaurant.AssemblyInfoInputs.cache
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\obj\Debug\netcoreapp3.1\Restaurant.AssemblyInfo.cs
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\obj\Debug\netcoreapp3.1\Restaurant.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\obj\Debug\netcoreapp3.1\Restaurant.dll
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\obj\Debug\netcoreapp3.1\Restaurant.pdb
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\bin\Debug\netcoreapp3.1\Restaurant.exe
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\bin\Debug\netcoreapp3.1\Restaurant.deps.json
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\bin\Debug\netcoreapp3.1\Restaurant.runtimeconfig.json
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\bin\Debug\netcoreapp3.1\Restaurant.runtimeconfig.dev.json
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\bin\Debug\netcoreapp3.1\Restaurant.dll
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\bin\Debug\netcoreapp3.1\Restaurant.pdb
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Restaurant\obj\Debug\netcoreapp3.1\Restaurant.genruntimeconfig.cache

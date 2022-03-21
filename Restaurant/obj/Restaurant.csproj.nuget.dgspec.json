@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\Source\\Repos\\Liamerino\\project-b-restaurant\\Restaurant\\Restaurant.csproj": {}
+    "C:\\Users\\Hp\\Documents\\GitHub\\project-b-restaurant\\Restaurant\\Restaurant.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\Source\\Repos\\Liamerino\\project-b-restaurant\\Restaurant\\Restaurant.csproj": {
+    "C:\\Users\\Hp\\Documents\\GitHub\\project-b-restaurant\\Restaurant\\Restaurant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\Source\\Repos\\Liamerino\\project-b-restaurant\\Restaurant\\Restaurant.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Documents\\GitHub\\project-b-restaurant\\Restaurant\\Restaurant.csproj",
         "projectName": "Restaurant",
-        "projectPath": "C:\\Users\\Hp\\Source\\Repos\\Liamerino\\project-b-restaurant\\Restaurant\\Restaurant.csproj",
+        "projectPath": "C:\\Users\\Hp\\Documents\\GitHub\\project-b-restaurant\\Restaurant\\Restaurant.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\Source\\Repos\\Liamerino\\project-b-restaurant\\Restaurant\\obj\\",
+        "outputPath": "C:\\Users\\Hp\\Documents\\GitHub\\project-b-restaurant\\Restaurant\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
