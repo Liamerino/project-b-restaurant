@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 //makes list work DONT DELETE
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace RestaurantLiamCode
 {
@@ -29,11 +33,23 @@ namespace RestaurantLiamCode
             return "Beschikbaarheid: " + Beschikbaar + ", Tafelnummer: " + TafelID + ", Binnen of buiten: " + Locatie;
         }
     }
+
+    public class klantReg
+    {
+        public string Email { get; set; }
+        public string Reservation { get; set; }
+    
+    }
     public class Gerechten
     {
 
         public static void Main()
         {
+            var JSONoptions = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+            };
+
             List<Menu> menuItems = new List<Menu>();
             List<Reservaties> Tafels = new List<Reservaties>();
 
@@ -61,7 +77,7 @@ namespace RestaurantLiamCode
             menuItems.Add(new Menu() { Gerechtnaam = "Kabak mücveri", Prijs = "7,50", Desc = "Gebakken geschaafde courgette", Allergenen = new string[] { "ei", "tarwe" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Kisir", Prijs = "6,50", Desc = "Salade met bulgur", Allergenen = new string[] { "tarwe" } });
             Console.WriteLine("Welkom je zit nu in main menu");
-            Console.WriteLine("Druk 1 om naar menu te gaan, druk 2 om daar te gaan");
+            Console.WriteLine("Druk 1 om naar menu te gaan, druk 2 om daar te gaan, druk 3 om gebruikers te toevoegen, druk 4 om in te loggen");
 
             //Reads input
             string Choice = Console.ReadLine();
@@ -80,6 +96,63 @@ namespace RestaurantLiamCode
                 {
                     Console.WriteLine(aReservaties);
                 }
+            }
+            else if (Choice == "3")
+            {
+
+                Console.WriteLine("Type your email address");
+
+                string email = Console.ReadLine();
+                string fileName = @"..\..\..\..\..\..\..\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\klantReg.json";
+                var jsonData = File.ReadAllText(fileName);
+
+                var clientlist = JsonSerializer.Deserialize<List<klantReg>>(jsonData)
+                      ?? new List<klantReg>();
+
+                clientlist.Add(new klantReg()
+                {
+                    Email = email,
+                    Reservation = "none"
+                });
+
+                string jsonString = JsonSerializer.Serialize(clientlist, JSONoptions);
+                
+                
+                File.WriteAllText(fileName, jsonString);
+            }
+
+
+            else if (Choice == "4")
+            {
+                Console.WriteLine("Press 1 to log in as guest, press 2 to log in as medewerker, press 3 to log in as beheerder");
+                string choiceLogin = Console.ReadLine();
+                if (choiceLogin == "1")
+                {
+                    string fileName = @"..\..\..\..\..\..\..\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\klantReg.json";
+                    var jsonData = File.ReadAllText(fileName);
+                    var clientlist = JsonSerializer.Deserialize<List<klantReg>>(jsonData)
+                        ?? new List<klantReg>();
+                    string jsonString = JsonSerializer.Serialize(clientlist, JSONoptions);
+                    string input = Console.ReadLine();
+                    
+                    if(jsonString.Contains(input) & input != "none") 
+                    {
+                        Console.WriteLine("You are logged in");
+                    }
+                    else
+                    {
+                        Console.WriteLine("user does not exist");
+                    }
+
+
+                }
+
+                if (choiceLogin == "2")
+                {
+                    Console.WriteLine("user login");
+                }
+                
+                
             }
 
         }

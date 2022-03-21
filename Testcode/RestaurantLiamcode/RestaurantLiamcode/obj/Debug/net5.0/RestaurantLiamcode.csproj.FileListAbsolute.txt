@@ -14,3 +14,19 @@ C:\Users\Redux Gamer\source\repos\RestaurantLiamcode\RestaurantLiamcode\obj\Debu
 C:\Users\Redux Gamer\source\repos\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.pdb
 C:\Users\Redux Gamer\source\repos\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.genruntimeconfig.cache
 C:\Users\Redux Gamer\source\repos\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\ref\RestaurantLiamcode.dll
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\bin\Debug\net5.0\RestaurantLiamcode.exe
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\bin\Debug\net5.0\RestaurantLiamcode.deps.json
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\bin\Debug\net5.0\RestaurantLiamcode.runtimeconfig.json
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\bin\Debug\net5.0\RestaurantLiamcode.runtimeconfig.dev.json
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\bin\Debug\net5.0\RestaurantLiamcode.dll
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\bin\Debug\net5.0\ref\RestaurantLiamcode.dll
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\bin\Debug\net5.0\RestaurantLiamcode.pdb
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.csprojAssemblyReference.cache
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.AssemblyInfoInputs.cache
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.AssemblyInfo.cs
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.dll
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\ref\RestaurantLiamcode.dll
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.pdb
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.genruntimeconfig.cache

@@ -46,27 +46,28 @@ namespace Restaurant
             menuItems.Add(new Menu() { Gerechtnaam = "Taco", Prijs = "5$", Desc = "Lorem ipsum ipsum lorem 2" });
             menuItems.Add(new Menu() { Gerechtnaam = "Brocadillo", Prijs = "11$", Desc = "Lorem ipsum ipsum lorem 3" });
             menuItems.Add(new Menu() { Gerechtnaam = "Wijn", Prijs = "10$", Desc = "Lorem ipsum ipsum lorem 4" });
-            //Console.WriteLine("Welkom je zit nu in main menu");
-            //Console.WriteLine("Druk 1 om naar menu te gaan, druk 2 om daar te gaan");
+            Console.WriteLine("hoi");
+            Console.WriteLine("Welkom je zit nu in main menuuuuuu");
+            Console.WriteLine("Druk 1 om naar menu te gaan, druk 2 om daar te gaan");
 
             //Reads input
-            //string Choice = Console.ReadLine();
-            //if (Choice == "1")
-            //{
-            //    Console.WriteLine("Main menu");
-            //    foreach (Menu aMenu in menuItems)
-            //    {
-            //        Console.WriteLine(aMenu);
-            //    }
-            //}
-            //else if (Choice == "2")
-            //{
-            //    Console.WriteLine("Reservaties");
-            //    foreach (Reservaties aReservaties in Tafels)
-            //    {
-            //        Console.WriteLine(aReservaties);
-            //    }
-            //}
+            string Choice = Console.ReadLine();
+            if (Choice == "1")
+            {
+                Console.WriteLine("Main menu");
+                foreach (Menu aMenu in menuItems)
+                {
+                    Console.WriteLine(aMenu);
+                }
+            }
+            else if (Choice == "2")
+            {
+                Console.WriteLine("Reservaties");
+                foreach (Reservaties aReservaties in Tafels)
+                {
+                    Console.WriteLine(aReservaties);
+                }
+            }
 
         }
 
