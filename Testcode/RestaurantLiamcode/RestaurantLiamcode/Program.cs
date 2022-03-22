@@ -82,7 +82,7 @@ namespace RestaurantLiamCode
             menuItems.Add(new Menu() { Gerechtnaam = "Koulouri Thessalonikis", Prijs = "6,50", Desc = "Rond sesambrood", Allergenen = new string[] { "tarwe", "sesam" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Marides tiganites", Prijs = "11,-", Desc = "Knapperig gefrituurde sardines", Allergenen = new string[] { "tarwe", "vis" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Piadine", Prijs = "7,-", Desc = "Platbrood met mozarella en tomaat", Allergenen = new string[] { "tarwe", "kaas" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Italiaanse quiche", Prijs = "10,50", Desc = "Quiche met pesto en mozarella", Allergenen = new string[] { "ei", "tarwe", "kaas" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Italiaanse quiche", Prijs = "10,50", Desc = "Quiche met pesto en mozarella", Allergenen = new string[] { "ei", "tarwe", "zuivel" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Bruschetta", Prijs = "6,50,-", Desc = "Toast met knoflook en tomaten", Allergenen = new string[] { "tarwe" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Calamari salade", Prijs = "11,-", Desc = "Salade met octopus", Allergenen = new string[] { "weekdieren" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Empanadas", Prijs = "10,50", Desc = "Gefrituurde deeghapjes met gekruid gehakt", Allergenen = new string[] { "ei", "tarwe", "rund" } });

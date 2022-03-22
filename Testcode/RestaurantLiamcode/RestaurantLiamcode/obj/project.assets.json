@@ -8,24 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\teren\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\liamm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\teren\\OneDrive\\Bureaublad\\github\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj",
+      "projectUniqueName": "C:\\Users\\liamm\\OneDrive\\Documenten\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj",
       "projectName": "RestaurantLiamcode",
-      "projectPath": "C:\\Users\\teren\\OneDrive\\Bureaublad\\github\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj",
-      "packagesPath": "C:\\Users\\teren\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\teren\\OneDrive\\Bureaublad\\github\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\obj\\",
+      "projectPath": "C:\\Users\\liamm\\OneDrive\\Documenten\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj",
+      "packagesPath": "C:\\Users\\liamm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\liamm\\OneDrive\\Documenten\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\teren\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\liamm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
