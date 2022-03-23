@@ -114,7 +114,7 @@ namespace RestaurantLiamCode
             string Choice = Console.ReadLine();
             if (Choice == "1")
             {
-                Console.WriteLine("Main menu");
+                Console.WriteLine("Menukaart");
                 foreach (Menu aMenu in menuItems)
                 {
                     Console.WriteLine(aMenu);
@@ -122,7 +122,7 @@ namespace RestaurantLiamCode
             }
             else if (Choice == "2")
             {
-                Console.WriteLine("Reservaties");
+                Console.WriteLine("Reserveringen");
                 foreach (Reservaties aReservaties in Tafels)
                 {
                     Console.WriteLine(aReservaties);
