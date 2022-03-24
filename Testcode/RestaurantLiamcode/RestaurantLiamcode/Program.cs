@@ -14,6 +14,7 @@ namespace RestaurantLiamCode
         public string Desc { get; set; }
 
         public string[] Allergenen { get; set; }
+        
 
         public override string ToString()
         {
@@ -77,22 +78,22 @@ namespace RestaurantLiamCode
 
 
             // Gerechten toevoegen
-            menuItems.Add(new Menu() { Gerechtnaam = "Kolokithopita", Prijs = "10,50", Desc = "Bladerdeeghapjes met feta en courgette", Allergenen = new string[] { "ei", "tarwe", "zuivel" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Rizogalo", Prijs = "5,-", Desc = "Griekse rijstepap", Allergenen = new string[] { "ei", "zuivel" }});
-            menuItems.Add(new Menu() { Gerechtnaam = "Koulouri Thessalonikis", Prijs = "6,50", Desc = "Rond sesambrood", Allergenen = new string[] { "tarwe", "sesam" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Marides tiganites", Prijs = "11,-", Desc = "Knapperig gefrituurde sardines", Allergenen = new string[] { "tarwe", "vis" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Piadine", Prijs = "7,-", Desc = "Platbrood met mozarella en tomaat", Allergenen = new string[] { "tarwe", "kaas" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Italiaanse quiche", Prijs = "10,50", Desc = "Quiche met pesto en mozarella", Allergenen = new string[] { "ei", "tarwe", "zuivel" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Bruschetta", Prijs = "6,50,-", Desc = "Toast met knoflook en tomaten", Allergenen = new string[] { "tarwe" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Calamari salade", Prijs = "11,-", Desc = "Salade met octopus", Allergenen = new string[] { "weekdieren" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Empanadas", Prijs = "10,50", Desc = "Gefrituurde deeghapjes met gekruid gehakt", Allergenen = new string[] { "ei", "tarwe", "rund" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Croquettes", Prijs = "12,-", Desc = "Knapperig gefrituurde deeghapjes met ham, kip of kabeljauw", Allergenen = new string[] { "ei", "gevogelte", "varken", "vis", "zuivel" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Albondigas", Prijs = "8,50", Desc = "Gehaktballen met pittige saus", Allergenen = new string[] { "ei", "tarwe", "rund", "varken" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Gambas al ajillo", Prijs = "12,-", Desc = "Garnalen met knoflook", Allergenen = new string[] { "weekdieren" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Lahmacun", Prijs = "6,50", Desc = "Kleine turkse pizza's", Allergenen = new string[] { "tarwe", "rund" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Çig köfte", Prijs = "8,50", Desc = "Gekruid lamsgehakt op een stokje", Allergenen = new string[] { "lam", "tarwe" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Kabak mücveri", Prijs = "7,50", Desc = "Gebakken geschaafde courgette", Allergenen = new string[] { "ei", "tarwe" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Kisir", Prijs = "6,50", Desc = "Salade met bulgur", Allergenen = new string[] { "tarwe" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Kolokithopita         ", Prijs = "10,50", Desc = "Bladerdeeghapjes met feta en courgette                    ", Allergenen = new string[] { "ei", "tarwe", "zuivel" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Rizogalo              ", Prijs = "5,-  ", Desc = "Griekse rijstepap                                         ", Allergenen = new string[] { "ei", "zuivel" }});
+            menuItems.Add(new Menu() { Gerechtnaam = "Koulouri Thessalonikis", Prijs = "6,50 ", Desc = "Rond sesambrood                                           ", Allergenen = new string[] { "tarwe", "sesam" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Marides tiganites     ", Prijs = "11,- ", Desc = "Knapperig gefrituurde sardines                            ", Allergenen = new string[] { "tarwe", "vis" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Piadine               ", Prijs = "7,-  ", Desc = "Platbrood met mozarella en tomaat                         ", Allergenen = new string[] { "tarwe", "kaas" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Italiaanse quiche     ", Prijs = "10,50", Desc = "Quiche met pesto en mozarella                             ", Allergenen = new string[] { "ei", "tarwe", "zuivel" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Bruschetta            ", Prijs = "6,50,", Desc = "Toast met knoflook en tomaten                             ", Allergenen = new string[] { "tarwe" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Calamari salade       ", Prijs = "11,- ", Desc = "Salade met octopus                                        ", Allergenen = new string[] { "weekdieren" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Empanadas             ", Prijs = "10,50", Desc = "Gefrituurde deeghapjes met gekruid gehakt                 ", Allergenen = new string[] { "ei", "tarwe", "rund" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Croquettes            ", Prijs = "12,- ", Desc = "Knapperig gefrituurde deeghapjes met ham, kip of kabeljauw", Allergenen = new string[] { "ei", "gevogelte", "varken", "vis", "zuivel" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Albondigas            ", Prijs = "8,50 ", Desc = "Gehaktballen met pittige saus                             ", Allergenen = new string[] { "ei", "tarwe", "rund", "varken" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Gambas al ajillo      ", Prijs = "12,- ", Desc = "Garnalen met knoflook                                     ", Allergenen = new string[] { "weekdieren" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Lahmacun              ", Prijs = "6,50 ", Desc = "Kleine turkse pizza's                                     ", Allergenen = new string[] { "tarwe", "rund" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Çig köfte             ", Prijs = "8,50 ", Desc = "Gekruid lamsgehakt op een stokje                          ", Allergenen = new string[] { "lam", "tarwe" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Kabak mücveri         ", Prijs = "7,50 ", Desc = "Gebakken geschaafde courgette                             ", Allergenen = new string[] { "ei", "tarwe" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Kisir                 ", Prijs = "6,50 ", Desc = "Salade met bulgur                                         ", Allergenen = new string[] { "tarwe" } });
             //Console.WriteLine("Welkom je zit nu in main menu");
             //Console.WriteLine("Druk 1 om naar menu te gaan, druk 2 om daar te gaan, druk 3 om gebruikers te toevoegen, druk 4 om in te loggen");
             Console.WriteLine("╒════════════════════════════════════════════════╕");
@@ -114,20 +115,34 @@ namespace RestaurantLiamCode
             string Choice = Console.ReadLine();
             if (Choice == "1")
             {
-                string[] keukenArr = new string[] { "Grieks", "Italiaans", "Spaans", "Turks" }; 
                 int i = 0;
-                Console.WriteLine("Menukaart");
-                Console.WriteLine("\n" + keukenArr[i]);
+                string[] keukenArr = new string[] { 
+                    "Grieks   ", 
+                    "Italiaans", 
+                    "Spaans   ", 
+                    "Turks    " };
+                Console.WriteLine("╒════════════════════════════════════════════════════════════════════════════════════════════╕");
+                Console.WriteLine("│ Menukaart                                                                                  │");
                 foreach (Menu aMenu in menuItems)
                 {
-                    if (i%4==0 && i!=0) {
-                        Console.WriteLine("\n");
-                        Console.WriteLine(keukenArr[i/4]);
+                    if (i%4==0) {
+                Console.WriteLine("│                                                                                            │");
+                Console.WriteLine($"│ {keukenArr[i/4]}                                                                                  │");
                     }
-                    Console.WriteLine(aMenu);
+                        Console.WriteLine($"│ {aMenu} │");
                     i++;
                 }
+                Console.WriteLine("│                                                                                            │");
+                Console.WriteLine("│ Type 1 om te filteren op allergenen                                                        │");
+                Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu                                              │");
+                Console.WriteLine("╘════════════════════════════════════════════════════════════════════════════════════════════╛");
+                string menukaartChoice = Console.ReadLine();
+                if (menukaartChoice == "1")
+                {
+                    Console.WriteLine("filter");
+                }
             }
+
             else if (Choice == "2")
             {
                 Console.WriteLine("Reserveringen");
