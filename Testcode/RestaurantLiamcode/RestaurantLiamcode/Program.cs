@@ -78,7 +78,7 @@ namespace RestaurantLiamCode
 
             // Gerechten toevoegen
             menuItems.Add(new Menu() { Gerechtnaam = "Kolokithopita", Prijs = "10,50", Desc = "Bladerdeeghapjes met feta en courgette", Allergenen = new string[] { "ei", "tarwe", "zuivel" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Rizogalo", Prijs = "5,-", Desc = "Griekse rijstepap", Allergenen = new string[] { "ei", "zuivel" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Rizogalo", Prijs = "5,-", Desc = "Griekse rijstepap", Allergenen = new string[] { "ei", "zuivel" }});
             menuItems.Add(new Menu() { Gerechtnaam = "Koulouri Thessalonikis", Prijs = "6,50", Desc = "Rond sesambrood", Allergenen = new string[] { "tarwe", "sesam" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Marides tiganites", Prijs = "11,-", Desc = "Knapperig gefrituurde sardines", Allergenen = new string[] { "tarwe", "vis" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Piadine", Prijs = "7,-", Desc = "Platbrood met mozarella en tomaat", Allergenen = new string[] { "tarwe", "kaas" } });
@@ -114,10 +114,18 @@ namespace RestaurantLiamCode
             string Choice = Console.ReadLine();
             if (Choice == "1")
             {
+                string[] keukenArr = new string[] { "Grieks", "Italiaans", "Spaans", "Turks" }; 
+                int i = 0;
                 Console.WriteLine("Menukaart");
+                Console.WriteLine("\n" + keukenArr[i]);
                 foreach (Menu aMenu in menuItems)
                 {
+                    if (i%4==0 && i!=0) {
+                        Console.WriteLine("\n");
+                        Console.WriteLine(keukenArr[i/4]);
+                    }
                     Console.WriteLine(aMenu);
+                    i++;
                 }
             }
             else if (Choice == "2")
