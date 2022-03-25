@@ -1,12 +1,23 @@
 [
-  {
-    "Login": "TestLogin",
-    "Password": "TestPassword",
-    "Name": "Rafael J."
-  },
-  {
-    "Login": "LoginTest",
-    "Password": "PasswordTest",
-    "Name": "Jafael R."
-  }
+  [
+    {
+      "Login": "Testlogin",
+      "Password": "Testpassword",
+      "Name": "Testname"
+    }
+  ],
+  [
+    {
+      "Login": "Testlogin2",
+      "Password": "Testpassword2",
+      "Name": "Testname2"
+    }
+  ],
+  [
+    {
+      "Login": "Testagain",
+      "Password": "Testagain",
+      "Name": "Testagain"
+    }
+  ]
 ]
