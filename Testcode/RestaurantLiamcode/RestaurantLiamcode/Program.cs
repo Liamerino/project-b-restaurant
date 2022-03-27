@@ -73,7 +73,7 @@ namespace RestaurantLiamCode
             //Console.WriteLine("Welkom je zit nu in main menu");
             //Console.WriteLine("Druk 1 om naar menu te gaan, druk 2 om daar te gaan, druk 3 om gebruikers te toevoegen, druk 4 om in te loggen");
             Console.WriteLine("╒════════════════════════════════════════════════╕");
-            Console.WriteLine("│  x   Welkom bij het restaurant Chum Bucket x   │");
+            Console.WriteLine("│  x   Welkom bij restaurant Alicante       x    │");
             Console.WriteLine("│x Type 1 om het menu te bekijken.               │");
             Console.WriteLine("│x Type 2 om te reserveren.                      │");
             Console.WriteLine("│x Type 3 om een gebruiker aan te maken.         │");
@@ -154,6 +154,7 @@ namespace RestaurantLiamCode
             Console.WriteLine("│ Type 1 om te filteren op allergenen                                                        │");
             Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu                                              │");
             Console.WriteLine("╘════════════════════════════════════════════════════════════════════════════════════════════╛");
+            Console.WriteLine(menuItems[0].Allergenen[0]);
             string menukaartChoice = Console.ReadLine();
             if (menukaartChoice == "1")
             {
