@@ -17,12 +17,12 @@ namespace RestaurantLiamCode
         public string[] Allergenen { get; set; }
 
 
+
         public override string ToString()
         {
             return Gerechtnaam + "  " + Prijs + "   " + Desc;
         }
     }
-
     //class for reservations
     public class Reservaties
     {
@@ -111,6 +111,74 @@ namespace RestaurantLiamCode
 
 
         }
+        private static List<string> Filter()
+        {
+            Console.WriteLine("╒════════════════════════════════════════════════════════════════╕");
+            Console.WriteLine("│ Filteren op allergenen                                         │");
+            Console.WriteLine("│ x Type 1 om gerechten met ei uit de menukaart te halen         │");
+            Console.WriteLine("│ x Type 2 om gerechten met gevogelte uit de menukaart te halen  │");
+            Console.WriteLine("│ x Type 3 om gerechten met lam uit de menukaart te halen        │");
+            Console.WriteLine("│ x Type 4 om gerechten met rund uit de menukaart te halen       │");
+            Console.WriteLine("│ x Type 5 om gerechten met sesam uit de menukaart te halen      │");
+            Console.WriteLine("│ x Type 6 om gerechten met tarwe uit de menukaart te halen      │");
+            Console.WriteLine("│ x Type 7 om gerechten met vis uit de menukaart te halen        │");
+            Console.WriteLine("│ x Type 8 om gerechten met weekdieren uit de menukaart te halen │");
+            Console.WriteLine("│ x Type 9 om gerechten met zuivel uit de menukaart te halen     │");
+            Console.WriteLine("│ x Type kaart om de filters toe te passen op de menukaart       │");
+            Console.WriteLine("╘════════════════════════════════════════════════════════════════╛");
+            List<string> filterList = new List<string>();
+            for (int i = 0; i <= 10; i++)
+            {
+                string filterChoice = Console.ReadLine();
+                if (filterChoice == "1")
+                {
+                    filterList.Add("ei");
+                }
+                else if (filterChoice == "2")
+                {
+                    filterList.Add("gevogelte");
+                }
+                else if (filterChoice == "3")
+                {
+                    filterList.Add("lam");
+                }
+                else if (filterChoice == "4")
+                {
+                    filterList.Add("rund");
+                }
+                else if (filterChoice == "5")
+                {
+                    filterList.Add("sesam");
+                }
+                else if (filterChoice == "6")
+                {
+                    filterList.Add("tarwe");
+                }
+                else if (filterChoice == "7")
+                {
+                    filterList.Add("vis");
+                }
+                else if (filterChoice == "8")
+                {
+                    filterList.Add("weekdieren");
+                }
+                else if (filterChoice == "9")
+                {
+                    filterList.Add("zuivel");
+                }
+                else if (filterChoice == "kaart")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("De waarde die u heeft ingevoerd past niet bij een allergeen. Type een getal of type kaart.");
+                }
+            }
+            return filterList;
+        }
+
+
 
         private static void choice1()
         {
@@ -119,7 +187,7 @@ namespace RestaurantLiamCode
             menuItems.Add(new Menu() { Gerechtnaam = "Rizogalo              ", Prijs = "5,-  ", Desc = "Griekse rijstepap                                         ", Allergenen = new string[] { "ei", "zuivel" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Koulouri Thessalonikis", Prijs = "6,50 ", Desc = "Rond sesambrood                                           ", Allergenen = new string[] { "tarwe", "sesam" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Marides tiganites     ", Prijs = "11,- ", Desc = "Knapperig gefrituurde sardines                            ", Allergenen = new string[] { "tarwe", "vis" } });
-            menuItems.Add(new Menu() { Gerechtnaam = "Piadine               ", Prijs = "7,-  ", Desc = "Platbrood met mozarella en tomaat                         ", Allergenen = new string[] { "tarwe", "kaas" } });
+            menuItems.Add(new Menu() { Gerechtnaam = "Piadine               ", Prijs = "7,-  ", Desc = "Platbrood met mozarella en tomaat                         ", Allergenen = new string[] { "tarwe", "zuivel" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Italiaanse quiche     ", Prijs = "10,50", Desc = "Quiche met pesto en mozarella                             ", Allergenen = new string[] { "ei", "tarwe", "zuivel" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Bruschetta            ", Prijs = "6,50,", Desc = "Toast met knoflook en tomaten                             ", Allergenen = new string[] { "tarwe" } });
             menuItems.Add(new Menu() { Gerechtnaam = "Calamari salade       ", Prijs = "11,- ", Desc = "Salade met octopus                                        ", Allergenen = new string[] { "weekdieren" } });
@@ -154,12 +222,41 @@ namespace RestaurantLiamCode
             Console.WriteLine("│ Type 1 om te filteren op allergenen                                                        │");
             Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu                                              │");
             Console.WriteLine("╘════════════════════════════════════════════════════════════════════════════════════════════╛");
-            Console.WriteLine(menuItems[0].Allergenen[0]);
             string menukaartChoice = Console.ReadLine();
             if (menukaartChoice == "1")
             {
-                Console.WriteLine("filter");
+                var filterList = Filter();
+                int filterI = 0;
+                Console.WriteLine("╒════════════════════════════════════════════════════════════════════════════════════════════╕");
+                Console.WriteLine("│ Menukaart                                                                                  │");
+                foreach (Menu aMenu in menuItems)
+                {
+                    if (filterI % 4 == 0)
+                    {
+                        Console.WriteLine("│                                                                                            │");
+                        Console.WriteLine($"│ {keukenArr[filterI / 4]}                                                                                  │");
+                    }
+                    bool allergeenIn = false;
+                    for (int j = 0; j<menuItems[filterI].Allergenen.Length; j++)
+                    {
+                        if (filterList.Contains(menuItems[filterI].Allergenen[j]))
+                        {
+                            allergeenIn = true;
+                            break;
+                        }
+                    }
+                    if (!allergeenIn)
+                    {
+                        Console.WriteLine($"│ {aMenu} │");
+                    }
+                    filterI++;
+                }
+                Console.WriteLine("│                                                                                            │");
+                Console.WriteLine("│ Type 1 om te filteren op allergenen                                                        │");
+                Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu                                              │");
+                Console.WriteLine("╘════════════════════════════════════════════════════════════════════════════════════════════╛");
             }
+
         }
 
         private static void choice2()
