@@ -51,6 +51,14 @@ namespace RestaurantLiamCode
         public string Name { get; set; }
 
     }
+
+    public class adminLogin
+    {
+        public string Login { get; set; }
+        public string Password { get; set; }
+        public string Name { get; set; }
+    }
+
     public class MainMenu
     {
 
@@ -355,40 +363,9 @@ namespace RestaurantLiamCode
             }
 
         }
-
-        private static void choice4()
-        {
-
-
-            string email = Console.ReadLine();
-
-            //relative file location, should work on every pc
-            string fileNameKlantReg = @"..\..\..\klantReg.json";
-            var jsonData = File.ReadAllText(fileNameKlantReg);
-
-            //deserializes and puts data into list
-            var clientlist = JsonSerializer.Deserialize<List<klantReg>>(jsonData)
-                  ?? new List<klantReg>();
-
-            //adds new entry to list
-            clientlist.Add(new klantReg()
-            {
-                Email = email,
-                Reservation = "none"
-            });
-            var JSONoptions = new JsonSerializerOptions
-            {
-                WriteIndented = true,
-            };
-            //serializes list again
-            string jsonStringKlanten = JsonSerializer.Serialize(clientlist, JSONoptions);
-
-            //overwrites list with new entry
-            File.WriteAllText(fileNameKlantReg, jsonStringKlanten);
-        }
-
         private static void choice3()
         {
+            Console.Clear();
             string fileNameMedewerkersLogin = @"..\..\..\medewerkersLogin.json";
             var jsonData = File.ReadAllText(fileNameMedewerkersLogin);
 
@@ -405,59 +382,137 @@ namespace RestaurantLiamCode
                 {
                     Console.Clear();
                     MainMedewerker();
-                    //instead of main, MedewerkerMain() should be created
                     return;
                 }
                 else if (i == (listlength - 1) && loginMedewerker != medewerkersList[i][0].Login && passwordMedewerker != medewerkersList[i][0].Password)
                 {
-                    Console.WriteLine("Verkeerde gebruikersnaam of wachtwoord, probeer opnieuw");
-                    choice4();
+                    Console.WriteLine("Verkeerde gebruikersnaam of wachtwoord, typ 1 om opnieuw in te loggen, of typ menu om terug naar menu te gaan");
+                    string choiceInloggen = Console.ReadLine();
+                    if (choiceInloggen == "1")
+                    {
+                        choice3();
+                    }
+                    else if (choiceInloggen == "menu")
+                    {
+                        Console.Clear();
+                        Main();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Verkeerde input");
+                        choice3();
+                    }
                 }
             }
         }
-/*        private static void choice5()
+
+        private static void choice4()
         {
-            var JSONoptions = new JsonSerializerOptions
-            {
-                WriteIndented = true,
-            };
-            string fileNameKlantReg = @"..\..\..\klantReg.json";
-            var jsonData = File.ReadAllText(fileNameKlantReg);
-            var clientlist = JsonSerializer.Deserialize<List<klantReg>>(jsonData)
-                ?? new List<klantReg>();
-            string jsonString = JsonSerializer.Serialize(clientlist, JSONoptions);
-            string input = Console.ReadLine();
+            Console.Clear();
+            string fileNameAdminLogin = @"..\..\..\adminLogin.json";
+            var jsonData = File.ReadAllText(fileNameAdminLogin);
 
-            //checks if input is already in Json file, if not, informs user does not exist
+            var adminList = JsonSerializer.Deserialize<List<List<adminLogin>>>(jsonData);
 
-            if (jsonString.Contains(input) & input != "none")
+            Console.WriteLine("Voer gebruikersnaam in om door te gaan:");
+            string loginAdmin = Console.ReadLine();
+            Console.WriteLine("Voer wachtwoord in om door te gaan");
+            string passwordAdmin = Console.ReadLine();
+            int listlength = adminList.Count;
+            for (int i = 0; i < listlength; i++)
             {
-                Console.WriteLine("You are logged in");
+                if (adminList[i][0].Login == loginAdmin && adminList[i][0].Password == passwordAdmin)
+                {
+                    Console.Clear();
+                    MainAdmin();
+                    return;
+                }
+                else if (i == (listlength - 1) && loginAdmin != adminList[i][0].Login && passwordAdmin != adminList[i][0].Password)
+                {
+                    Console.WriteLine("Verkeerde gebruikersnaam of wachtwoord, typ 1 om opnieuw in te loggen, of typ menu om terug naar menu te gaan");
+                    string choiceInloggen = Console.ReadLine();
+                    if (choiceInloggen == "1")
+                    {
+                        choice4();
+                    }
+                    else if (choiceInloggen == "menu")
+                    {
+                        Console.Clear();
+                        Main();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Verkeerde input");
+                        choice3();
+                    }
+                }
             }
-            else
-            {
-                Console.WriteLine("user does not exist");
-            }
-        }*/
+
+        }
 
         public static void choice5u()
-        { 
-        //hier moet nog uitlog komen (denk gewoon alle bools terug naar false en dan komt je weet bij main uit
+        {
+            Console.WriteLine("Wilt u zeker uitloggen? Typ 1 om uit te loggen");
+            string confirmation = Console.ReadLine();
+            if (confirmation == "1")
+            {
+                Console.Clear();
+                Main();
+            }
         }
 
         public static void choice1Admin()
         {
-
+            Console.WriteLine("Hier komt de dagomzet");
         }
 
         public static void choice2Admin()
-        { 
-        
+        {
+            Console.Clear();
+
+            var JSONoptions = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+            };
+
+            Console.WriteLine("Voer in gewenste gebruikersnaam");
+            string newLogin = Console.ReadLine();
+
+            Console.WriteLine("Voer in gewenste wachtwoord");
+            string newPassword = Console.ReadLine();
+
+            Console.WriteLine("Voer in naam en achternaam van de gebruiker");
+            string newName = Console.ReadLine();
+
+            string fileNameMedewerkersLogin = @"..\..\..\medewerkersLogin.json";
+            var jsonData = File.ReadAllText(fileNameMedewerkersLogin);
+
+            var UsersList = JsonSerializer.Deserialize<List<List<medeLogin>>>(jsonData);
+
+            List<medeLogin> sublist = new List<medeLogin>();
+            sublist.Add(new medeLogin() { Login = newLogin, Password = newPassword, Name = newName });
+            UsersList.Add(sublist);
+
+
+
+            string jsonString = JsonSerializer.Serialize(UsersList, JSONoptions);
+            File.WriteAllText(fileNameMedewerkersLogin, jsonString);
+            Console.Clear();
+            Console.WriteLine("Gebruiker " + newName + " toegevoegd.");
+            MainAdmin();
+
+
         }
 
         public static void choice3Admin()
         {
-
+            Console.WriteLine("Wilt u zeker uitloggen? Typ 1 om uit te loggen");
+            string confirmation = Console.ReadLine();
+            if (confirmation == "1")
+            {
+                Console.Clear();
+                Main();
+            }
         }
 
     }
