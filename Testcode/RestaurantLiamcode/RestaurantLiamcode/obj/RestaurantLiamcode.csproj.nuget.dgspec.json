@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\Documents\\GitHub\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj": {}
+    "C:\\Users\\Redux Gamer\\Documents\\GitHub\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\Documents\\GitHub\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj": {
+    "C:\\Users\\Redux Gamer\\Documents\\GitHub\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\Documents\\GitHub\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj",
+        "projectUniqueName": "C:\\Users\\Redux Gamer\\Documents\\GitHub\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj",
         "projectName": "RestaurantLiamcode",
-        "projectPath": "C:\\Users\\Hp\\Documents\\GitHub\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj",
-        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\Documents\\GitHub\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\obj\\",
+        "projectPath": "C:\\Users\\Redux Gamer\\Documents\\GitHub\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\RestaurantLiamcode.csproj",
+        "packagesPath": "C:\\Users\\Redux Gamer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Redux Gamer\\Documents\\GitHub\\project-b-restaurant\\Testcode\\RestaurantLiamcode\\RestaurantLiamcode\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Redux Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,12 +55,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.14, 5.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

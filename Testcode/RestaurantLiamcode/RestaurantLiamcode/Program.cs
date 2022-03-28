@@ -7,7 +7,12 @@ using System.Text.Json;
 
 namespace RestaurantLiamCode
 {
-    
+    public static class Reserveringen
+    {
+        public static List<Tuple<string, string, int>> reserveringen = new List<Tuple<string, string, int>>();
+
+
+    }
     public class Menu
     {
         public string Gerechtnaam { get; set; }
@@ -66,7 +71,7 @@ namespace RestaurantLiamCode
         {
 
 
-
+            //    List<Tuple<string, string, int>> reserveringen = new List<Tuple<string, string, int>>();
 
 
 
@@ -122,6 +127,7 @@ namespace RestaurantLiamCode
         }
 
         public static void MainMedewerker(){
+            //List<Tuple<string, string, int>> reserveringen = new List<Tuple<string, string, int>>();
             Console.WriteLine("╒════════════════════════════════════════════════╕");
             Console.WriteLine("│  x             Welkom medewerker            x  │");
             Console.WriteLine("│x Type 1 om het menu te bekijken.               │");
@@ -170,6 +176,7 @@ namespace RestaurantLiamCode
 
         public static void MainAdmin()
         {
+            //List<Tuple<string, string, int>> reserveringen = new List<Tuple<string, string, int>>();
             Console.WriteLine("╒════════════════════════════════════════════════╕");
             Console.WriteLine("│  x               Welkom Admin                 x│");
             Console.WriteLine("│x Type 1 om de dagomzet te bekijken.            │");
@@ -313,6 +320,11 @@ namespace RestaurantLiamCode
             Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu                                              │");
             Console.WriteLine("╘════════════════════════════════════════════════════════════════════════════════════════════╛");
             string menukaartChoice = Console.ReadLine();
+            if (menukaartChoice == "menu")
+            {
+                Console.Clear();
+                Main();
+            }
             if (menukaartChoice == "1")
             {
                 var filterList = Filter();
@@ -346,20 +358,87 @@ namespace RestaurantLiamCode
                 Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu                                              │");
                 Console.WriteLine("╘════════════════════════════════════════════════════════════════════════════════════════════╛");
             }
+            menukaartChoice = Console.ReadLine();
+            if (menukaartChoice == "menu")
+            {
+                Console.Clear();
+                Main();
+            }
 
         }
 
         private static void choice2()
         {
-            List<Reservaties> Tafels = new List<Reservaties>();
-            Tafels.Add(new Reservaties() { Beschikbaar = "Niet", TafelID = 1, Locatie = "Buiten" });
-            Tafels.Add(new Reservaties() { Beschikbaar = "Wel", TafelID = 2, Locatie = "Buiten" });
-            Tafels.Add(new Reservaties() { Beschikbaar = "Niet", TafelID = 3, Locatie = "Binnen" });
-            Tafels.Add(new Reservaties() { Beschikbaar = "Wel", TafelID = 4, Locatie = "Buiten" });
-            Console.WriteLine("Reserveringen");
-            foreach (Reservaties aReservaties in Tafels)
+            int plekken = 150;
+            Console.WriteLine("Reserveren");
+            Console.WriteLine("Voor welke datum wilt u reserveren? Type dit alstublieft als DD-MM-JJJJ");
+            string datum = Console.ReadLine();
+            Console.WriteLine("Hoe laat wilt u reserveren? Type dit alstublieft als uur:minuten");
+            string tijd = Console.ReadLine();
+            int plekkenTijdstip = 0;
+            for (int i = 0; i<Reserveringen.reserveringen.Count; i++)
             {
-                Console.WriteLine(aReservaties);
+                if (Reserveringen.reserveringen[i].Item1 == datum && Reserveringen.reserveringen[i].Item2 == tijd)
+                {
+                    plekkenTijdstip = plekkenTijdstip + Reserveringen.reserveringen[i].Item3;
+                }
+                if (plekkenTijdstip >= plekken)
+                {
+                    Console.WriteLine("╒═════════════════════════════════════════════════════╕");
+                    Console.WriteLine("│ Deze datum en dit tijdstip zijn niet beschikbaar.   │");
+                    Console.WriteLine("│ Type 1 om een ander datum en tijdstip te reserveren.│");
+                    Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.      │");
+                    Console.WriteLine("╘═════════════════════════════════════════════════════╛");
+                    string reservChoice = Console.ReadLine();
+                    if (reservChoice == "menu")
+                    {
+                        Main();
+                        break;
+                    }
+                    if (reservChoice == "1")
+                    {
+                        choice2();
+                        break;
+                    }
+                }
+            }
+            Console.WriteLine("Voor hoeveel personen wilt u reserveren?");
+            int personen = Int16.Parse(Console.ReadLine());
+            if (plekkenTijdstip + personen <= plekken)
+            {
+                Reserveringen.reserveringen.Add(Tuple.Create(datum, tijd, personen));
+                Console.WriteLine("╒═══════════════════════════════════════════════════════════╕");
+                Console.WriteLine("│ U heeft gereserveerd.                                     │");
+                Console.WriteLine($"│ Uw reservering is op {datum} om {tijd} voor {personen} personen. │");
+                Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.            │");
+                Console.WriteLine("╘═══════════════════════════════════════════════════════════╛");
+                string reservChoice = Console.ReadLine();
+                if (reservChoice == "menu")
+                {
+                    Console.Clear();
+                    Main();
+                    //return reserveringen;
+                }
+            }
+            else
+            {
+                Console.WriteLine("╒═════════════════════════════════════════════════════╕");
+                Console.WriteLine("│ Deze datum en dit tijdstip zijn niet beschikbaar.   │");
+                Console.WriteLine("│ Type 1 om een ander datum en tijdstip te reserveren.│");
+                Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.      │");
+                Console.WriteLine("╘═════════════════════════════════════════════════════╛");
+                string reservChoice = Console.ReadLine();
+                if (reservChoice == "menu")
+                {
+                    Console.Clear();
+                    Main();
+                    //return reserveringen;
+                }
+                if (reservChoice == "1")
+                {
+                    Console.Clear();
+                    choice2();
+                }
             }
 
         }
