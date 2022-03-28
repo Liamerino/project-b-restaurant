@@ -392,11 +392,13 @@ namespace RestaurantLiamCode
                     string reservChoice = Console.ReadLine();
                     if (reservChoice == "menu")
                     {
+                        Console.Clear();
                         Main();
                         break;
                     }
                     if (reservChoice == "1")
                     {
+                        Console.Clear();
                         choice2();
                         break;
                     }
