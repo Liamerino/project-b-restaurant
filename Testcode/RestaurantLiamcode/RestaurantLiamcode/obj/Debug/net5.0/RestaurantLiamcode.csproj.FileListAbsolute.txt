@@ -62,3 +62,7 @@ C:\Users\Redux Gamer\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLi
 C:\Users\Redux Gamer\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.pdb
 C:\Users\Redux Gamer\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.genruntimeconfig.cache
 C:\Users\Redux Gamer\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\ref\RestaurantLiamcode.dll
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\bin\Debug\net5.0\System.Text.Json.dll
+C:\Users\Hp\Documents\GitHub\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\obj\Debug\net5.0\RestaurantLiamcode.csproj.CopyComplete

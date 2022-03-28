@@ -281,7 +281,7 @@ namespace RestaurantLiamCode
             string email = Console.ReadLine();
 
             //relative file location, should work on every pc
-            string fileNameKlantReg = @"..\..\..\..\..\..\..\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\klantReg.json";
+            string fileNameKlantReg = @"..\..\..\klantReg.json";
             var jsonData = File.ReadAllText(fileNameKlantReg);
 
             //deserializes and puts data into list
@@ -325,7 +325,7 @@ namespace RestaurantLiamCode
             {
                 WriteIndented = true,
             };
-            string fileNameKlantReg = @"..\..\..\..\..\..\..\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\klantReg.json";
+            string fileNameKlantReg = @"..\..\klantReg.json";
             var jsonData = File.ReadAllText(fileNameKlantReg);
             var clientlist = JsonSerializer.Deserialize<List<klantReg>>(jsonData)
                 ?? new List<klantReg>();
@@ -345,7 +345,7 @@ namespace RestaurantLiamCode
         }
         private static void choice42()
         {
-            string fileNameMedewerkersLogin = @"..\..\..\..\..\..\..\project-b-restaurant\Testcode\RestaurantLiamcode\RestaurantLiamcode\medewerkersLogin.json";
+            string fileNameMedewerkersLogin = @"..\..\..\medewerkersLogin.json";
             var jsonData = File.ReadAllText(fileNameMedewerkersLogin);
 
             var medewerkersList = JsonSerializer.Deserialize<List<List<medeLogin>>>(jsonData);
