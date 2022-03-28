@@ -26,5 +26,13 @@
   {
     "Email": "",
     "Reservation": "none"
+  },
+  {
+    "Email": "Testmail",
+    "Reservation": "none"
+  },
+  {
+    "Email": "Test",
+    "Reservation": "none"
   }
 ]

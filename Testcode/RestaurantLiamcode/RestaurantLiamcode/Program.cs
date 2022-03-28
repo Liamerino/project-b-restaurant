@@ -78,8 +78,8 @@ namespace RestaurantLiamCode
             Console.WriteLine("│x Type 2 om te reserveren.                      │");
             Console.WriteLine("│x Type 3 om een gebruiker aan te maken.         │");
             Console.WriteLine("│x Type 4 om als medewerker in te loggen.        │");
-            Console.WriteLine("│x Type _ om te ___                              │");
-            Console.WriteLine("│x Type _ om te ___                              │");
+            Console.WriteLine("│x Type 5 om als guest in te loggen              │");
+            Console.WriteLine("│x Type 6 om als admin in te loggen              │");
             Console.WriteLine("╘════════════════════════════════════════════════╛");
             Console.WriteLine("                                                ");
             Console.WriteLine("╒═════════════════════════════════════════════╕");
@@ -109,6 +109,10 @@ namespace RestaurantLiamCode
                 choice4();
             }
 
+            else if (Choice == "5")
+            {
+                choice5();
+            }
 
         }
         private static List<string> Filter()
@@ -307,44 +311,6 @@ namespace RestaurantLiamCode
 
         private static void choice4()
         {
-            Console.WriteLine("Press 1 to log in as guest, press 2 to log in as medewerker, press 3 to log in as beheerder");
-            string choiceLogin = Console.ReadLine();
-            if (choiceLogin == "1")
-            {
-                choice41();
-            }
-
-            if (choiceLogin == "2")
-            {
-                choice42();
-            }
-        }
-        private static void choice41()
-        {
-            var JSONoptions = new JsonSerializerOptions
-            {
-                WriteIndented = true,
-            };
-            string fileNameKlantReg = @"..\..\klantReg.json";
-            var jsonData = File.ReadAllText(fileNameKlantReg);
-            var clientlist = JsonSerializer.Deserialize<List<klantReg>>(jsonData)
-                ?? new List<klantReg>();
-            string jsonString = JsonSerializer.Serialize(clientlist, JSONoptions);
-            string input = Console.ReadLine();
-
-            //checks if input is already in Json file, if not, informs user does not exist
-
-            if (jsonString.Contains(input) & input != "none")
-            {
-                Console.WriteLine("You are logged in");
-            }
-            else
-            {
-                Console.WriteLine("user does not exist");
-            }
-        }
-        private static void choice42()
-        {
             string fileNameMedewerkersLogin = @"..\..\..\medewerkersLogin.json";
             var jsonData = File.ReadAllText(fileNameMedewerkersLogin);
 
@@ -364,13 +330,38 @@ namespace RestaurantLiamCode
                     //instead of main, MedewerkerMain() should be created
                     return;
                 }
-                else if (i == (listlength-1) && loginMedewerker != medewerkersList[i][0].Login && passwordMedewerker != medewerkersList[i][0].Password)
+                else if (i == (listlength - 1) && loginMedewerker != medewerkersList[i][0].Login && passwordMedewerker != medewerkersList[i][0].Password)
                 {
                     Console.WriteLine("Verkeerde gebruikersnaam of wachtwoord, probeer opnieuw");
-                    choice42();
+                    choice4();
                 }
             }
         }
+        private static void choice5()
+        {
+            var JSONoptions = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+            };
+            string fileNameKlantReg = @"..\..\..\klantReg.json";
+            var jsonData = File.ReadAllText(fileNameKlantReg);
+            var clientlist = JsonSerializer.Deserialize<List<klantReg>>(jsonData)
+                ?? new List<klantReg>();
+            string jsonString = JsonSerializer.Serialize(clientlist, JSONoptions);
+            string input = Console.ReadLine();
+
+            //checks if input is already in Json file, if not, informs user does not exist
+
+            if (jsonString.Contains(input) & input != "none")
+            {
+                Console.WriteLine("You are logged in");
+            }
+            else
+            {
+                Console.WriteLine("user does not exist");
+            }
+        }
+
 
 
     }
