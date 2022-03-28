@@ -9,7 +9,7 @@ namespace RestaurantLiamCode
 {
     public static class Reserveringen
     {
-        public static List<Tuple<string, string, int>> reserveringen = new List<Tuple<string, string, int>>();
+        public static List<Tuple<string, string, int, string>> reserveringen = new List<Tuple<string, string, int, string>>();
 
 
     }
@@ -408,7 +408,9 @@ namespace RestaurantLiamCode
             int personen = Int16.Parse(Console.ReadLine());
             if (plekkenTijdstip + personen <= plekken)
             {
-                Reserveringen.reserveringen.Add(Tuple.Create(datum, tijd, personen));
+                Console.WriteLine("Wat is uw naam?");
+                string naam = Console.ReadLine();
+                Reserveringen.reserveringen.Add(Tuple.Create(datum, tijd, personen, naam));
                 Console.WriteLine("╒═══════════════════════════════════════════════════════════╕");
                 Console.WriteLine("│ U heeft gereserveerd.                                     │");
                 Console.WriteLine($"│ Uw reservering is op {datum} om {tijd} voor {personen} personen. │");
