@@ -411,11 +411,30 @@ namespace RestaurantLiamCode
                 Console.WriteLine("Wat is uw naam?");
                 string naam = Console.ReadLine();
                 Reserveringen.reserveringen.Add(Tuple.Create(datum, tijd, personen, naam));
-                Console.WriteLine("╒═══════════════════════════════════════════════════════════╕");
-                Console.WriteLine("│ U heeft gereserveerd.                                     │");
-                Console.WriteLine($"│ Uw reservering is op {datum} om {tijd} voor {personen} personen. │");
-                Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.            │");
-                Console.WriteLine("╘═══════════════════════════════════════════════════════════╛");
+                if (personen >= 100)
+                {
+                    Console.WriteLine("╒═════════════════════════════════════════════════════════════╕");
+                    Console.WriteLine("│ U heeft gereserveerd.                                       │");
+                    Console.WriteLine($"│ Uw reservering is op {datum} om {tijd} voor {personen} personen. │");
+                    Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.              │");
+                    Console.WriteLine("╘═════════════════════════════════════════════════════════════╛");
+                }
+                else if (personen >= 10)
+                {
+                    Console.WriteLine("╒════════════════════════════════════════════════════════════╕");
+                    Console.WriteLine("│ U heeft gereserveerd.                                      │");
+                    Console.WriteLine($"│ Uw reservering is op {datum} om {tijd} voor {personen} personen. │");
+                    Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.             │");
+                    Console.WriteLine("╘════════════════════════════════════════════════════════════╛");
+                }
+                else
+                {
+                    Console.WriteLine("╒═══════════════════════════════════════════════════════════╕");
+                    Console.WriteLine("│ U heeft gereserveerd.                                     │");
+                    Console.WriteLine($"│ Uw reservering is op {datum} om {tijd} voor {personen} personen. │");
+                    Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.            │");
+                    Console.WriteLine("╘═══════════════════════════════════════════════════════════╛");
+                }
                 string reservChoice = Console.ReadLine();
                 if (reservChoice == "menu")
                 {
