@@ -73,18 +73,19 @@ namespace RestaurantLiamCode
             //Console.WriteLine("Welkom je zit nu in main menu");
             //Console.WriteLine("Druk 1 om naar menu te gaan, druk 2 om daar te gaan, druk 3 om gebruikers te toevoegen, druk 4 om in te loggen");
             Console.WriteLine("╒════════════════════════════════════════════════╕");
-            Console.WriteLine("│  x   Welkom bij restaurant Alicante       x    │");
+            Console.WriteLine("│  x     Welkom bij restaurant Alicante       x  │");
             Console.WriteLine("│x Type 1 om het menu te bekijken.               │");
-            Console.WriteLine("│x Type 2 om te reserveren.                      │");
-            Console.WriteLine("│x Type 3 om een gebruiker aan te maken.         │");
-            Console.WriteLine("│x Type 4 om als medewerker in te loggen.        │");
-            Console.WriteLine("│x Type 5 om als guest in te loggen              │");
-            Console.WriteLine("│x Type 6 om als admin in te loggen              │");
+            Console.WriteLine("│x Type 2 om een tafel te reserveren.            │");
+            Console.WriteLine("│x Type 3 om als medewerker in te loggen.        │");
+            Console.WriteLine("│x Type 4 om als admin in te loggen.             │");
             Console.WriteLine("╘════════════════════════════════════════════════╛");
             Console.WriteLine("                                                ");
             Console.WriteLine("╒═════════════════════════════════════════════╕");
             Console.WriteLine("│ Openingstijden: elke dag van 8:00 tot 22:00 │");
             Console.WriteLine("│ Locatie: Oostkousdijk 5                     │");
+            Console.WriteLine("│ Sfeer:Een frisse zeewind in je haren terwijl│");
+            Console.WriteLine("│ je kijkt naar dobberende bootjes in een     │");
+            Console.WriteLine("│ oude haven.                                 │");
             Console.WriteLine("│ We zien u graag snel!                       │");
             Console.WriteLine("╘═════════════════════════════════════════════╛");
             //Reads input
@@ -109,12 +110,89 @@ namespace RestaurantLiamCode
                 choice4();
             }
 
-            else if (Choice == "5")
+
+        }
+
+        public static void MainMedewerker(){
+            Console.WriteLine("╒════════════════════════════════════════════════╕");
+            Console.WriteLine("│  x             Welkom medewerker            x  │");
+            Console.WriteLine("│x Type 1 om het menu te bekijken.               │");
+            Console.WriteLine("│x Type 2 om een tafel te reserveren.            │");
+            Console.WriteLine("│x Type 3 om te bestellen voor een tafel.        │");
+            Console.WriteLine("│x Type 4 om de tafelbezetting te zien.          │");
+            Console.WriteLine("│x Type 5 om uit te loggen.                      │");
+            Console.WriteLine("╘════════════════════════════════════════════════╛");
+            Console.WriteLine("                                                ");
+            Console.WriteLine("╒═════════════════════════════════════════════╕");
+            Console.WriteLine("│ Openingstijden: elke dag van 8:00 tot 22:00 │");
+            Console.WriteLine("│ Locatie: Oostkousdijk 5                     │");
+            Console.WriteLine("│ Sfeer:Een frisse zeewind in je haren terwijl│");
+            Console.WriteLine("│ je kijkt naar dobberende bootjes in een     │");
+            Console.WriteLine("│ oude haven.                                 │");
+
+            Console.WriteLine("╘═════════════════════════════════════════════╛");
+            //Reads input
+            string Choice = Console.ReadLine();
+            if (Choice == "1")
             {
-                choice5();
+                choice1();
+            }
+
+            else if (Choice == "2")
+            {
+                choice2();
+            }
+            else if (Choice == "3")
+            {
+                choice3();
+            }
+
+
+            else if (Choice == "4")
+            {
+                choice4();
+            }
+
+            else if (Choice == "5") 
+            {
+                choice5u();
             }
 
         }
+
+        public static void MainAdmin()
+        {
+            Console.WriteLine("╒════════════════════════════════════════════════╕");
+            Console.WriteLine("│  x               Welkom Admin                 x│");
+            Console.WriteLine("│x Type 1 om de dagomzet te bekijken.            │");
+            Console.WriteLine("│x Type 2 om gebruikers aan te maken.            │");
+            Console.WriteLine("│x Type 3 om uit te loggen                       │");
+            Console.WriteLine("╘════════════════════════════════════════════════╛");
+            Console.WriteLine("                                                ");
+            Console.WriteLine("╒═════════════════════════════════════════════╕");
+            Console.WriteLine("│ Openingstijden: elke dag van 8:00 tot 22:00 │");
+            Console.WriteLine("│ Locatie: Oostkousdijk 5                     │");
+            Console.WriteLine("│ Sfeer:Een frisse zeewind in je haren terwijl│");
+            Console.WriteLine("│ je kijkt naar dobberende bootjes in een     │");
+            Console.WriteLine("│ oude haven.                                 │");
+            Console.WriteLine("╘═════════════════════════════════════════════╛");
+            //Reads input
+            string Choice = Console.ReadLine();
+            if (Choice == "1")
+            {
+                choice1Admin();
+            }
+
+            else if (Choice == "2")
+            {
+                choice2Admin();
+            }
+            else if (Choice == "3")
+            {
+                choice3Admin();
+            }
+        }
+
         private static List<string> Filter()
         {
             Console.WriteLine("╒════════════════════════════════════════════════════════════════╕");
@@ -278,7 +356,7 @@ namespace RestaurantLiamCode
 
         }
 
-        private static void choice3()
+        private static void choice4()
         {
 
 
@@ -309,7 +387,7 @@ namespace RestaurantLiamCode
             File.WriteAllText(fileNameKlantReg, jsonStringKlanten);
         }
 
-        private static void choice4()
+        private static void choice3()
         {
             string fileNameMedewerkersLogin = @"..\..\..\medewerkersLogin.json";
             var jsonData = File.ReadAllText(fileNameMedewerkersLogin);
@@ -326,7 +404,7 @@ namespace RestaurantLiamCode
                 if (medewerkersList[i][0].Login == loginMedewerker && medewerkersList[i][0].Password == passwordMedewerker)
                 {
                     Console.Clear();
-                    Main();
+                    MainMedewerker();
                     //instead of main, MedewerkerMain() should be created
                     return;
                 }
@@ -337,7 +415,7 @@ namespace RestaurantLiamCode
                 }
             }
         }
-        private static void choice5()
+/*        private static void choice5()
         {
             var JSONoptions = new JsonSerializerOptions
             {
@@ -360,9 +438,27 @@ namespace RestaurantLiamCode
             {
                 Console.WriteLine("user does not exist");
             }
+        }*/
+
+        public static void choice5u()
+        { 
+        //hier moet nog uitlog komen (denk gewoon alle bools terug naar false en dan komt je weet bij main uit
         }
 
+        public static void choice1Admin()
+        {
 
+        }
+
+        public static void choice2Admin()
+        { 
+        
+        }
+
+        public static void choice3Admin()
+        {
+
+        }
 
     }
 
