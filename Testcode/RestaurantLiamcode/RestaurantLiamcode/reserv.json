@@ -1,0 +1,442 @@
+[
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "1",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "2",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "3",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "4",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "5",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "6",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "7",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "8",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "9",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "10",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "11",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "12",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "13",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "14",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "15",
+    "Status": "beschikbaar",
+    "MaxPers": 2
+  },
+  {
+    "KlantID": {
+      "Item1": "20-04-2022",
+      "Item2": "16:45",
+      "Item3": 7,
+      "Item4": "Test"
+    },
+    "TafelID": "16",
+    "Status": "gereserveerd",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "17",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "18",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "19",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "20",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "21",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "22",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "23",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "24",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "25",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "26",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "27",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "28",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "29",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "30",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "31",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "32",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "33",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "34",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "35",
+    "Status": "beschikbaar",
+    "MaxPers": 4
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "36",
+    "Status": "beschikbaar",
+    "MaxPers": 8
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "37",
+    "Status": "beschikbaar",
+    "MaxPers": 8
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "38",
+    "Status": "beschikbaar",
+    "MaxPers": 8
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "39",
+    "Status": "beschikbaar",
+    "MaxPers": 8
+  },
+  {
+    "KlantID": {
+      "Item1": "leeg",
+      "Item2": "leeg",
+      "Item3": 0,
+      "Item4": "leeg"
+    },
+    "TafelID": "40",
+    "Status": "beschikbaar",
+    "MaxPers": 8
+  }
+]

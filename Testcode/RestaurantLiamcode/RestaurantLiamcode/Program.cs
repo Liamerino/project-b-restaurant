@@ -28,6 +28,14 @@ namespace RestaurantLiamCode
 
 
     }
+    public class reservList
+    {
+        public Tuple<string,string,int,string> KlantID { get; set; }
+        public string TafelID { get; set; }
+        public string Status { get; set; }
+        public int MaxPers { get; set; }
+
+    }
     public class Menu
     {
         public string Gerechtnaam { get; set; }
@@ -166,7 +174,7 @@ namespace RestaurantLiamCode
 
             else if (Choice == "4")
             {
-                choice4();
+                choice4u();
             }
 
             else if (Choice == "5") 
@@ -372,6 +380,7 @@ namespace RestaurantLiamCode
         private static void choice2()
         {
             List<Reserveringen> reserveringList = new List<Reserveringen>();
+
             reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "1", "beschikbaar", 2));
             reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "2", "beschikbaar", 2));
             reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "3", "beschikbaar", 2));
@@ -412,6 +421,13 @@ namespace RestaurantLiamCode
             reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "38", "beschikbaar", 8));
             reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "39", "beschikbaar", 8));
             reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "40", "beschikbaar", 8));
+
+            var JSONoptions = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                IncludeFields = true,
+            };
+
             Console.WriteLine("Reserveren");
             Console.WriteLine("Voor welke datum wilt u reserveren? Type dit alstublieft als DD-MM-JJJJ");
             string datum = Console.ReadLine();
@@ -470,6 +486,11 @@ namespace RestaurantLiamCode
             Console.WriteLine($"│ Uw reservering is op {reserveringList[index].KlantID.Item1} om {reserveringList[index].KlantID.Item2} voor {reserveringList[index].KlantID.Item3} personen. │");
             Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.            │");
             Console.WriteLine("╘═══════════════════════════════════════════════════════════╛");
+
+            string fileNameReserv = @"..\..\..\reserv.json";
+            string jsonString = JsonSerializer.Serialize(reserveringList, JSONoptions);
+            File.WriteAllText(fileNameReserv, jsonString);
+
             string reservChoice = Console.ReadLine();
             if (reservChoice == "menu")
             {
@@ -562,6 +583,46 @@ namespace RestaurantLiamCode
                         choice3();
                     }
                 }
+            }
+
+        }
+
+        private static void choice4u()
+        {
+            Console.Clear();
+            var JSONoptions = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                IncludeFields = true,
+            };
+
+            string fileNameReserv = @"..\..\..\reserv.json";
+
+
+            var jsonData = File.ReadAllText(fileNameReserv);
+            var reservData = JsonSerializer.Deserialize<List<reservList>>(jsonData);
+
+            for (int i = 0; i < reservData.Count; i++)
+            {
+                if (reservData[i].Status == "gereserveerd")
+                {
+                    Console.WriteLine("Tafel ID: " + reservData[i].TafelID);
+                    Console.WriteLine("Beschikbaarheid: " + reservData[i].Status);
+                    Console.WriteLine("Aantal plekken: " + reservData[i].MaxPers);
+                    Console.WriteLine("Reservatie: " + reservData[i].KlantID + "\n");
+                }
+            }
+            Console.WriteLine("Typ 1 om terug te gaan of typ 2 om uit te loggen");
+            string input = Console.ReadLine();
+            if (input == "1")
+            {
+                Console.Clear();
+                MainMedewerker();
+            }
+            else if (input == "2")
+            {
+                Console.Clear();
+                choice5u();
             }
 
         }
