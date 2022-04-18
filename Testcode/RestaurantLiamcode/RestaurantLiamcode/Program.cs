@@ -379,54 +379,21 @@ namespace RestaurantLiamCode
 
         private static void choice2()
         {
-            List<Reserveringen> reserveringList = new List<Reserveringen>();
+            //List<Reserveringen> reserveringList = new List<Reserveringen>();
 
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "1", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "2", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "3", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "4", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "5", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "6", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "7", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "8", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "9", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "10", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "11", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "12", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "13", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "14", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "15", "beschikbaar", 2));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "16", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "17", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "18", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "19", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "20", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "21", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "22", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "23", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "24", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "25", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "26", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "27", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "28", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "29", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "30", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "31", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "32", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "33", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "34", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "35", "beschikbaar", 4));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "36", "beschikbaar", 8));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "37", "beschikbaar", 8));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "38", "beschikbaar", 8));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "39", "beschikbaar", 8));
-            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "40", "beschikbaar", 8));
+            
 
             var JSONoptions = new JsonSerializerOptions
             {
                 WriteIndented = true,
                 IncludeFields = true,
             };
+
+            string fileNameReserv = @"..\..\..\reserv.json";
+
+
+            var jsonData = File.ReadAllText(fileNameReserv);
+            var reserveringList = JsonSerializer.Deserialize<List<reservList>>(jsonData);
 
             Console.WriteLine("Reserveren");
             Console.WriteLine("Voor welke datum wilt u reserveren? Type dit alstublieft als DD-MM-JJJJ");
@@ -441,7 +408,7 @@ namespace RestaurantLiamCode
             {
                 for (int i = 0; i < reserveringList.Count; i++)
                 {
-                    if (reserveringList[i].MaxPers == 2 && reserveringList[i].Status == "beschikbaar")
+                    if (reserveringList[i].MaxPers >= personen && reserveringList[i].Status == "beschikbaar")
                     {
                         Console.WriteLine("Wat is uw naam?");
                         naam = Console.ReadLine();
@@ -455,7 +422,7 @@ namespace RestaurantLiamCode
             {
                 for (int i = 0; i<reserveringList.Count; i++)
                 {
-                    if (reserveringList[i].MaxPers == 4 && reserveringList[i].Status == "beschikbaar")
+                    if (reserveringList[i].MaxPers >= personen && reserveringList[i].Status == "beschikbaar")
                     {
                         Console.WriteLine("Wat is uw naam?");
                         naam = Console.ReadLine();
@@ -468,7 +435,7 @@ namespace RestaurantLiamCode
             {
                 for (int i = 0; i < reserveringList.Count; i++)
                 {
-                    if (reserveringList[i].MaxPers == 4 && reserveringList[i].Status == "beschikbaar")
+                    if (reserveringList[i].MaxPers >= personen && reserveringList[i].Status == "beschikbaar")
                     {
                         Console.WriteLine("Wat is uw naam?");
                         naam = Console.ReadLine();
@@ -487,7 +454,6 @@ namespace RestaurantLiamCode
             Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.            │");
             Console.WriteLine("╘═══════════════════════════════════════════════════════════╛");
 
-            string fileNameReserv = @"..\..\..\reserv.json";
             string jsonString = JsonSerializer.Serialize(reserveringList, JSONoptions);
             File.WriteAllText(fileNameReserv, jsonString);
 

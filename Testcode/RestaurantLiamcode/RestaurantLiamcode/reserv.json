@@ -1,13 +1,13 @@
 [
   {
     "KlantID": {
-      "Item1": "leeg",
-      "Item2": "leeg",
-      "Item3": 0,
-      "Item4": "leeg"
+      "Item1": "21-04-2022",
+      "Item2": "12:30",
+      "Item3": 2,
+      "Item4": "Rafael"
     },
     "TafelID": "1",
-    "Status": "beschikbaar",
+    "Status": "gereserveerd",
     "MaxPers": 2
   },
   {
@@ -166,10 +166,10 @@
   },
   {
     "KlantID": {
-      "Item1": "20-04-2022",
-      "Item2": "16:45",
-      "Item3": 7,
-      "Item4": "Test"
+      "Item1": "24-04-2022",
+      "Item2": "15:30",
+      "Item3": 4,
+      "Item4": "Thomas"
     },
     "TafelID": "16",
     "Status": "gereserveerd",
@@ -386,13 +386,13 @@
   },
   {
     "KlantID": {
-      "Item1": "leeg",
-      "Item2": "leeg",
-      "Item3": 0,
-      "Item4": "leeg"
+      "Item1": "27-04-2022",
+      "Item2": "18:13",
+      "Item3": 7,
+      "Item4": "Emily"
     },
     "TafelID": "36",
-    "Status": "beschikbaar",
+    "Status": "gereserveerd",
     "MaxPers": 8
   },
   {
