@@ -9,13 +9,21 @@ namespace RestaurantLiamCode
 {
     public class Reserveringen
     {
-        public Tuple<string, string, int, string> klantID { get; set; }
+        public Tuple<string, string, int, string> KlantID;
 
-        public string tafelID { get; set; }
+        public string TafelID;
 
-        public string status { get; set; }
+        public string Status;
 
-        public int maxPers { get; set; }
+        public int MaxPers;
+
+        public Reserveringen(Tuple<string, string, int, string> KlantID, string TafelID, string Status, int MaxPers)
+        {
+            this.KlantID = KlantID;
+            this.TafelID = TafelID;
+            this.Status = Status;
+            this.MaxPers = MaxPers; 
+        }
 
 
 
@@ -61,8 +69,6 @@ namespace RestaurantLiamCode
 
     public class MainMenu
     {
-        List<Reserveringen> reserveringList = new List<Reserveringen>();
-        reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "1", status = "beschikbaar", maxPers = 2));
         public static void Main()
         {
 
@@ -366,52 +372,51 @@ namespace RestaurantLiamCode
         private static void choice2()
         {
             List<Reserveringen> reserveringList = new List<Reserveringen>();
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "1", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "2", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "3", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "4", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "5", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "6", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "7", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "8", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "9", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "10", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "11", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "12", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "13", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "14", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "15", status = "beschikbaar", maxPers = 2));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "16", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "17", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "18", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "19", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "20", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "21", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "22", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "23", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "24", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "25", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "27", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "28", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "29", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "30", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "31", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "32", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "33", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "34", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "35", status = "beschikbaar", maxPers = 4));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "36", status = "beschikbaar", maxPers = 8));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "37", status = "beschikbaar", maxPers = 8));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "38", status = "beschikbaar", maxPers = 8));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "39", status = "beschikbaar", maxPers = 8));
-            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "40", status = "beschikbaar", maxPers = 8));
-            int plekken = 150;
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "1", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "2", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "3", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "4", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "5", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "6", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "7", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "8", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "9", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "10", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "11", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "12", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "13", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "14", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "15", "beschikbaar", 2));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "16", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "17", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "18", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "19", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "20", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "21", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "22", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "23", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "24", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "25", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "26", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "27", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "28", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "29", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "30", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "31", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "32", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "33", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "34", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "35", "beschikbaar", 4));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "36", "beschikbaar", 8));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "37", "beschikbaar", 8));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "38", "beschikbaar", 8));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "39", "beschikbaar", 8));
+            reserveringList.Add(new Reserveringen(Tuple.Create("leeg", "leeg", 0, "leeg"), "40", "beschikbaar", 8));
             Console.WriteLine("Reserveren");
             Console.WriteLine("Voor welke datum wilt u reserveren? Type dit alstublieft als DD-MM-JJJJ");
             string datum = Console.ReadLine();
             Console.WriteLine("Hoe laat wilt u reserveren? Type dit alstublieft als uur:minuten");
             string tijd = Console.ReadLine();
-            int plekkenTijdstip = 0;
             Console.WriteLine("Voor hoeveel personen wilt u reserveren?");
             int personen = Int16.Parse(Console.ReadLine());
             string naam = "naam";
@@ -420,7 +425,7 @@ namespace RestaurantLiamCode
             {
                 for (int i = 0; i < reserveringList.Count; i++)
                 {
-                    if (reserveringList[i].maxPers == 2 && reserveringList[i].status == "beschikbaar")
+                    if (reserveringList[i].MaxPers == 2 && reserveringList[i].Status == "beschikbaar")
                     {
                         Console.WriteLine("Wat is uw naam?");
                         naam = Console.ReadLine();
@@ -434,7 +439,7 @@ namespace RestaurantLiamCode
             {
                 for (int i = 0; i<reserveringList.Count; i++)
                 {
-                    if (reserveringList[i].maxPers == 4 && reserveringList[i].status == "beschikbaar")
+                    if (reserveringList[i].MaxPers == 4 && reserveringList[i].Status == "beschikbaar")
                     {
                         Console.WriteLine("Wat is uw naam?");
                         naam = Console.ReadLine();
@@ -447,7 +452,7 @@ namespace RestaurantLiamCode
             {
                 for (int i = 0; i < reserveringList.Count; i++)
                 {
-                    if (reserveringList[i].maxPers == 4 && reserveringList[i].status == "beschikbaar")
+                    if (reserveringList[i].MaxPers == 4 && reserveringList[i].Status == "beschikbaar")
                     {
                         Console.WriteLine("Wat is uw naam?");
                         naam = Console.ReadLine();
@@ -457,12 +462,12 @@ namespace RestaurantLiamCode
                 }
             }
 
-            reserveringList[index].status = "gereserveerd";
-            reserveringList[index].klantID = Tuple.Create(datum, tijd, personen, naam);
+            reserveringList[index].Status = "gereserveerd";
+            reserveringList[index].KlantID = Tuple.Create(datum, tijd, personen, naam);
             Console.Clear();
             Console.WriteLine("╒═══════════════════════════════════════════════════════════╕");
             Console.WriteLine("│ U heeft gereserveerd.                                     │");
-            Console.WriteLine($"│ Uw reservering is op {reserveringList[index].klantID.Item1} om {reserveringList[index].klantID.Item2} voor {reserveringList[index].klantID.Item3} personen. │");
+            Console.WriteLine($"│ Uw reservering is op {reserveringList[index].KlantID.Item1} om {reserveringList[index].KlantID.Item2} voor {reserveringList[index].KlantID.Item3} personen. │");
             Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.            │");
             Console.WriteLine("╘═══════════════════════════════════════════════════════════╛");
             string reservChoice = Console.ReadLine();
