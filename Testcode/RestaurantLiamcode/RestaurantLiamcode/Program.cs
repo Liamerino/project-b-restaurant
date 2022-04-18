@@ -7,9 +7,16 @@ using System.Text.Json;
 
 namespace RestaurantLiamCode
 {
-    public static class Reserveringen
+    public class Reserveringen
     {
-        public static List<Tuple<string, string, int, string>> reserveringen = new List<Tuple<string, string, int, string>>();
+        public Tuple<string, string, int, string> klantID { get; set; }
+
+        public string tafelID { get; set; }
+
+        public string status { get; set; }
+
+        public int maxPers { get; set; }
+
 
 
     }
@@ -26,18 +33,6 @@ namespace RestaurantLiamCode
         public override string ToString()
         {
             return Gerechtnaam + "  " + Prijs + "   " + Desc;
-        }
-    }
-    //class for reservations
-    public class Reservaties
-    {
-        public string Beschikbaar { get; set; }
-        public int TafelID { get; set; }
-        public string Locatie { get; set; }
-        //makes it possible to print class elements
-        public override string ToString()
-        {
-            return "Beschikbaarheid: " + Beschikbaar + ", Tafelnummer: " + TafelID + ", Binnen of buiten: " + Locatie;
         }
     }
 
@@ -66,7 +61,8 @@ namespace RestaurantLiamCode
 
     public class MainMenu
     {
-
+        List<Reserveringen> reserveringList = new List<Reserveringen>();
+        reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "1", status = "beschikbaar", maxPers = 2));
         public static void Main()
         {
 
@@ -369,6 +365,46 @@ namespace RestaurantLiamCode
 
         private static void choice2()
         {
+            List<Reserveringen> reserveringList = new List<Reserveringen>();
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "1", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "2", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "3", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "4", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "5", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "6", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "7", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "8", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "9", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "10", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "11", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "12", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "13", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "14", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "15", status = "beschikbaar", maxPers = 2));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "16", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "17", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "18", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "19", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "20", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "21", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "22", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "23", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "24", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "25", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "27", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "28", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "29", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "30", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "31", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "32", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "33", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "34", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "35", status = "beschikbaar", maxPers = 4));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "36", status = "beschikbaar", maxPers = 8));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "37", status = "beschikbaar", maxPers = 8));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "38", status = "beschikbaar", maxPers = 8));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "39", status = "beschikbaar", maxPers = 8));
+            reserveringList.Add(new Reserveringen(klantID = Tuple.Create("leeg", "leeg", 0, "leeg"), tafelID = "40", status = "beschikbaar", maxPers = 8));
             int plekken = 150;
             Console.WriteLine("Reserveren");
             Console.WriteLine("Voor welke datum wilt u reserveren? Type dit alstublieft als DD-MM-JJJJ");
@@ -376,92 +412,65 @@ namespace RestaurantLiamCode
             Console.WriteLine("Hoe laat wilt u reserveren? Type dit alstublieft als uur:minuten");
             string tijd = Console.ReadLine();
             int plekkenTijdstip = 0;
-            for (int i = 0; i<Reserveringen.reserveringen.Count; i++)
-            {
-                if (Reserveringen.reserveringen[i].Item1 == datum && Reserveringen.reserveringen[i].Item2 == tijd)
-                {
-                    plekkenTijdstip = plekkenTijdstip + Reserveringen.reserveringen[i].Item3;
-                }
-                if (plekkenTijdstip >= plekken)
-                {
-                    Console.WriteLine("╒═════════════════════════════════════════════════════╕");
-                    Console.WriteLine("│ Deze datum en dit tijdstip zijn niet beschikbaar.   │");
-                    Console.WriteLine("│ Type 1 om een ander datum en tijdstip te reserveren.│");
-                    Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.      │");
-                    Console.WriteLine("╘═════════════════════════════════════════════════════╛");
-                    string reservChoice = Console.ReadLine();
-                    if (reservChoice == "menu")
-                    {
-                        Console.Clear();
-                        Main();
-                        break;
-                    }
-                    if (reservChoice == "1")
-                    {
-                        Console.Clear();
-                        choice2();
-                        break;
-                    }
-                }
-            }
             Console.WriteLine("Voor hoeveel personen wilt u reserveren?");
             int personen = Int16.Parse(Console.ReadLine());
-            if (plekkenTijdstip + personen <= plekken)
+            string naam = "naam";
+            int index = 0;
+            if (personen > 0 && personen <= 2)
             {
-                Console.WriteLine("Wat is uw naam?");
-                string naam = Console.ReadLine();
-                Reserveringen.reserveringen.Add(Tuple.Create(datum, tijd, personen, naam));
-                if (personen >= 100)
+                for (int i = 0; i < reserveringList.Count; i++)
                 {
-                    Console.WriteLine("╒═════════════════════════════════════════════════════════════╕");
-                    Console.WriteLine("│ U heeft gereserveerd.                                       │");
-                    Console.WriteLine($"│ Uw reservering is op {datum} om {tijd} voor {personen} personen. │");
-                    Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.              │");
-                    Console.WriteLine("╘═════════════════════════════════════════════════════════════╛");
-                }
-                else if (personen >= 10)
-                {
-                    Console.WriteLine("╒════════════════════════════════════════════════════════════╕");
-                    Console.WriteLine("│ U heeft gereserveerd.                                      │");
-                    Console.WriteLine($"│ Uw reservering is op {datum} om {tijd} voor {personen} personen. │");
-                    Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.             │");
-                    Console.WriteLine("╘════════════════════════════════════════════════════════════╛");
-                }
-                else
-                {
-                    Console.WriteLine("╒═══════════════════════════════════════════════════════════╕");
-                    Console.WriteLine("│ U heeft gereserveerd.                                     │");
-                    Console.WriteLine($"│ Uw reservering is op {datum} om {tijd} voor {personen} personen. │");
-                    Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.            │");
-                    Console.WriteLine("╘═══════════════════════════════════════════════════════════╛");
-                }
-                string reservChoice = Console.ReadLine();
-                if (reservChoice == "menu")
-                {
-                    Console.Clear();
-                    Main();
-                    //return reserveringen;
+                    if (reserveringList[i].maxPers == 2 && reserveringList[i].status == "beschikbaar")
+                    {
+                        Console.WriteLine("Wat is uw naam?");
+                        naam = Console.ReadLine();
+                        index = i;
+                        break;
+                    }
+                    
                 }
             }
-            else
+            else if (personen > 2 && personen <= 4)
             {
-                Console.WriteLine("╒═════════════════════════════════════════════════════╕");
-                Console.WriteLine("│ Deze datum en dit tijdstip zijn niet beschikbaar.   │");
-                Console.WriteLine("│ Type 1 om een ander datum en tijdstip te reserveren.│");
-                Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.      │");
-                Console.WriteLine("╘═════════════════════════════════════════════════════╛");
-                string reservChoice = Console.ReadLine();
-                if (reservChoice == "menu")
+                for (int i = 0; i<reserveringList.Count; i++)
                 {
-                    Console.Clear();
-                    Main();
-                    //return reserveringen;
+                    if (reserveringList[i].maxPers == 4 && reserveringList[i].status == "beschikbaar")
+                    {
+                        Console.WriteLine("Wat is uw naam?");
+                        naam = Console.ReadLine();
+                        index = i;
+                        break;
+                    }
                 }
-                if (reservChoice == "1")
+            }
+            else if (personen > 4 && personen <= 8)
+            {
+                for (int i = 0; i < reserveringList.Count; i++)
                 {
-                    Console.Clear();
-                    choice2();
+                    if (reserveringList[i].maxPers == 4 && reserveringList[i].status == "beschikbaar")
+                    {
+                        Console.WriteLine("Wat is uw naam?");
+                        naam = Console.ReadLine();
+                        index = i;
+                        break;
+                    }
                 }
+            }
+
+            reserveringList[index].status = "gereserveerd";
+            reserveringList[index].klantID = Tuple.Create(datum, tijd, personen, naam);
+            Console.Clear();
+            Console.WriteLine("╒═══════════════════════════════════════════════════════════╕");
+            Console.WriteLine("│ U heeft gereserveerd.                                     │");
+            Console.WriteLine($"│ Uw reservering is op {reserveringList[index].klantID.Item1} om {reserveringList[index].klantID.Item2} voor {reserveringList[index].klantID.Item3} personen. │");
+            Console.WriteLine("│ Type menu om terug te gaan naar het hoofdmenu.            │");
+            Console.WriteLine("╘═══════════════════════════════════════════════════════════╛");
+            string reservChoice = Console.ReadLine();
+            if (reservChoice == "menu")
+            {
+                Console.Clear();
+                Main();
+                //return reserveringen;
             }
 
         }
